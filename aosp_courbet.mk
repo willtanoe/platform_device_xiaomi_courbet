@@ -15,6 +15,9 @@ $(call inherit-product, device/xiaomi/courbet/device.mk)
 $(call inherit-product, vendor/aosp/config/common.mk)
 TARGET_SUPPORTS_QUICK_TAP := true
 
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
 PRODUCT_NAME := aosp_courbet
 PRODUCT_DEVICE := courbet
 PRODUCT_BRAND := Xiaomi
