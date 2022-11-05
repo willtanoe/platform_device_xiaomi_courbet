@@ -28,6 +28,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ro.spark.maintainer=willtanoe
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+WITH_GAPPS := true
+SELINUX_IGNORE_NEVERALLOWS := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="courbet_global-user 12 RKQ1.210614.002 V13.0.8.0.SKQMIXM release-keys"
