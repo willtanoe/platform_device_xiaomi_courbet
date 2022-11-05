@@ -104,3 +104,4 @@ VENDOR_SECURITY_PATCH := 2022-09-01
 
 # Inherit from proprietary files
 include vendor/xiaomi/courbet/BoardConfigVendor.mk
+endif
