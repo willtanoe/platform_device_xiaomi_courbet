@@ -13,10 +13,6 @@ $(call inherit-product, device/xiaomi/courbet/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/spark/config/common_full_phone.mk)
-TARGET_SUPPORTS_QUICK_TAP := true
-
-# Bootanimation
-TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_NAME := spark_courbet
 PRODUCT_DEVICE := courbet
@@ -26,6 +22,21 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ro.spark.maintainer=willtanoe
+
+# Blur
+TARGET_USES_BLUR := true
+
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Pixel Stuff
+TARGET_INCLUDE_PIXEL_CHARGER := true
+
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 WITH_GAPPS := true
