@@ -32,6 +32,10 @@ persist.vendor.qcom.bluetooth.soc=cherokee \
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
 ro.vendor.bluetooth.wipower=false
 
+# Blur
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.launcher.blur.appLaunch=0
+
 # Charger
 PRODUCT_PRODUCT_PROPERTIES += \
 ro.charger.enable_suspend=true
@@ -50,6 +54,22 @@ media.stagefright.thumbnail.prefer_hw_codecs=true \
 mmp.enable.3g2=true \
 persist.mm.enable.prefetch=true \
 ro.media.recorder-max-base-layer-fps=60
+
+# Display (color mode)
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.sf.color_saturation=1.0 \
+persist.sys.sf.native_mode=0 \
+persist.sys.sf.color_mode=9
+
+# Fling
+PRODUCT_VENDOR_PROPERTIES += \
+ro.min.fling_velocity=160 \
+ro.max.fling_velocity=20000 \
+ro.max.fling_velocity=20000 \
+ro.vendor.qti.cgroup_follow.enable=true \
+persist.vendor.qti.inputopts.enable=true \
+persist.vendor.qti.inputopts.movetouchslop=0.6 \
+ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
 
 # Netflix custom property
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -86,6 +106,13 @@ telephony.active_modems.max_count=2
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.sensors.enable.mag_filter=true
+
+# Surfaceflinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+ro.sf.blurs_are_expensive=1
+ro.surface_flinger.supports_background_blur=1
+debug.sf.latch_unsignaled=1
+debug.sf.disable_backpressure=1
 
 # VoLTE/ViLTE/WFC
 PRODUCT_PROPERTY_OVERRIDES += \
