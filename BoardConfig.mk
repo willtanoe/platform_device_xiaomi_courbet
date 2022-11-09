@@ -33,14 +33,6 @@ ODM_MANIFEST_COURBET_FILES := \
 # Kernel
 TARGET_KERNEL_CONFIG := courbet_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6150
-# TARGET_KERNEL_CLANG_VERSION := proton
-
-# Prebuilt kernel
-ifneq "$(wildcard $(TARGET_KERNEL_SOURCE)/prebuilt )" ""
-TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_PREBUILT_KERNEL := $(TARGET_KERNEL_SOURCE)/prebuilt/Image.gz
-BOARD_PREBUILT_DTBOIMAGE := $(TARGET_KERNEL_SOURCE)/prebuilt/dtbo.img
-BOARD_PREBUILT_DTBIMAGE := $(TARGET_KERNEL_SOURCE)/prebuilt/dtb.img
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -105,4 +97,3 @@ VENDOR_SECURITY_PATCH := 2022-09-01
 
 # Inherit from proprietary files
 include vendor/xiaomi/courbet/BoardConfigVendor.mk
-endif
