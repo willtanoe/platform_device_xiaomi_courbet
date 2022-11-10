@@ -25,8 +25,6 @@ ro.spark.maintainer=willtanoe
 
 # Blur
 TARGET_USES_BLUR := true
-PRODUCT_SYSTEM_PROPERTIES += \
-ro.launcher.blur.appLaunch=0
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -39,13 +37,6 @@ USE_PIXEL_CHARGER := false
 
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
-
-# Surfaceflinger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-ro.sf.blurs_are_expensive=1
-ro.surface_flinger.supports_background_blur=1
-debug.sf.latch_unsignaled=1
-debug.sf.disable_backpressure=1
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 WITH_GAPPS := true
