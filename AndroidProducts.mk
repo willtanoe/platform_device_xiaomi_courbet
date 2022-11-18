@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/spark_courbet.mk
+    $(LOCAL_DIR)/awaken_courbet.mk
 
 COMMON_LUNCH_CHOICES := \
-    spark_courbet-user \
-    spark_courbet-userdebug \
-    spark_courbet-eng
+    awaken_courbet-user \
+    awaken_courbet-userdebug \
+    awaken_courbet-eng
