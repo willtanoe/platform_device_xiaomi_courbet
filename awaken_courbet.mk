@@ -14,7 +14,7 @@ $(call inherit-product, device/xiaomi/courbet/device.mk)
 # Inherit some common Awaken stuff.
 $(call inherit-product, vendor/awaken/config/common_full_phone.mk)
 
-PRODUCT_NAME := spark_courbet
+PRODUCT_NAME := awaken_courbet
 PRODUCT_DEVICE := courbet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 11 Lite 4G
