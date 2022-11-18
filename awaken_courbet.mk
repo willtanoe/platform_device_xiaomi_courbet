@@ -32,6 +32,9 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
+#GAPPS
+USE_GAPPS := true
+
 # Pixel Stuff
 USE_PIXEL_CHARGER := false
 
