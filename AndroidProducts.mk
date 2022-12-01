@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/spark_courbet.mk
+    $(LOCAL_DIR)/p404_courbet.mk
 
 COMMON_LUNCH_CHOICES := \
-    spark_courbet-user \
-    spark_courbet-userdebug \
-    spark_courbet-eng
+    p404_courbet-user \
+    p404_courbet-userdebug \
+    p404_courbet-eng

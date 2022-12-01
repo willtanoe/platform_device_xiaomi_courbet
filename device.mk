@@ -72,7 +72,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-spark
+    $(LOCAL_PATH)/overlay-p404
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -97,7 +97,10 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/qcom/display \
+    hardware/qcom/media \
+    vendor/qcom/opensource/audio-hal/primary-hal
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
