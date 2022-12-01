@@ -11,36 +11,30 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from courbet device
 $(call inherit-product, device/xiaomi/courbet/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/spark/config/common_full_phone.mk)
+# Inherit from Project 404 vendor config
+$(call inherit-product, vendor/404/configs/common.mk)
 
-PRODUCT_NAME := spark_courbet
+# Gapps
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+
+PRODUCT_NAME := p404_courbet
 PRODUCT_DEVICE := courbet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 11 Lite 4G
 PRODUCT_MANUFACTURER := Xiaomi
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-ro.spark.maintainer=willtanoe
-
-# Blur
+# Project 404 OS Stuffs
+WITH_GAPPS := true
+TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_USES_BLUR := true
 
-# Bootanimation
-TARGET_BOOT_ANIMATION_RES := 1080
-
-# Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED := true
-
-# Pixel Stuff
-USE_PIXEL_CHARGER := false
-
-# Quick Tap
-TARGET_SUPPORTS_QUICK_TAP := true
+# Tokui
+P404_BUILDTYPE := TOKUI
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-WITH_GAPPS := true
-SELINUX_IGNORE_NEVERALLOWS := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="courbet_global-user 12 RKQ1.210614.002 V13.0.8.0.SKQMIXM release-keys"
