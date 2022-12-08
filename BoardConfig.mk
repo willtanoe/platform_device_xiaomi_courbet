@@ -24,6 +24,7 @@ AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
 PRODUCT_FS_COMPRESSION := 1
 
 # HIDL
+<<<<<<< HEAD
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/hidl/device_framework_compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/hidl/lineage_framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
