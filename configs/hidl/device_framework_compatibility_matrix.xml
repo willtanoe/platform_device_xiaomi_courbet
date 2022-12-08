@@ -353,7 +353,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <instance>imsrtpservice</instance>
     </interface>
 </hal>
-<hal format="hidl" optional="true">
+</hal>
+    <hal format="hidl" optional="true">
         <name>vendor.dolby.hardware.dms</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -361,5 +362,5 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IDms</name>
             <instance>default</instance>
         </interface>
-</hal>
+    </hal>
 </compatibility-matrix>
