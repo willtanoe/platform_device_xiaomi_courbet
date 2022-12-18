@@ -11,29 +11,36 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from courbet device
 $(call inherit-product, device/xiaomi/courbet/device.mk)
 
-# Inherit some common Awaken stuff.
-$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
+# Inherit some common riceDroid Stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := awaken_courbet
+PRODUCT_NAME := lineage_courbet
 PRODUCT_DEVICE := courbet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 11 Lite 4G
 PRODUCT_MANUFACTURER := Xiaomi
 
+# Maintainer Stuff
+RICE_MAINTAINER := willtanoe
+RICE_DEVICE := Mi 11 Lite 4G
+RICE_CHIPSET := Snapdragon 732G
+
 # Blur
-TARGET_USES_BLUR := true
+TARGET_ENABLE_BLUR := true
 
 # Bootanimation
-TARGET_BOOT_ANIMATION_RES := 1080
+SUSHI_BOOTANIMATION := 1080
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # GAPPS
-USE_GAPPS := true
+WITH_GMS := true
 
 # Pixel Stuff
 USE_PIXEL_CHARGER := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
 
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
