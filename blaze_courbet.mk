@@ -38,9 +38,6 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 # GAPPS
 USE_GAPPS := true
 
-# Pixel Stuff
-USE_PIXEL_CHARGER := false
-
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
 
