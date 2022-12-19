@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/awaken_courbet.mk
+    $(LOCAL_DIR)/blaze_courbet.mk
 
 COMMON_LUNCH_CHOICES := \
-    awaken_courbet-user \
-    awaken_courbet-userdebug \
-    awaken_courbet-eng
+    blaze_courbet-user \
+    blaze_courbet-userdebug \
+    blaze_courbet-eng
