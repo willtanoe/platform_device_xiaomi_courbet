@@ -11,20 +11,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from courbet device
 $(call inherit-product, device/xiaomi/courbet/device.mk)
 
-# Inherit from the Blaze configuration.
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+# Inherit some common Cherish stuff
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
-PRODUCT_NAME := blaze_courbet
+PRODUCT_NAME := cherish_courbet
 PRODUCT_DEVICE := courbet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 11 Lite 4G
 PRODUCT_MANUFACTURER := Xiaomi
 
-# Blaze Stuff
-BLAZE_MAINTAINER := willtanoe
-TARGET_USE_PIXEL_CHARGER := true
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+# Inherit some props from Cherish
+# CHERISH_VANILLA := true
+
+TARGET_SUPPORTS_CALL_RECORDING := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_USE_PIXEL_CHARGER := true
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer=willtanoe
+
 
 # Blur
 TARGET_USES_BLUR := true
@@ -36,7 +42,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # GAPPS
-WITH_GAPPS := true
+WITH_GMS := true
 
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
