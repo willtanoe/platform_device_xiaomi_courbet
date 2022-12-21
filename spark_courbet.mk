@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from courbet device
 $(call inherit-product, device/xiaomi/courbet/device.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common Spark stuff.
 $(call inherit-product, vendor/spark/config/common_full_phone.mk)
 
 PRODUCT_NAME := spark_courbet
@@ -32,15 +32,19 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
+# GAPPS
+WITH_GAPPS := true
+
 # Pixel Stuff
 USE_PIXEL_CHARGER := true
 
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-WITH_GAPPS := true
+# Ignore Neverallows
 SELINUX_IGNORE_NEVERALLOWS := true
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="courbet_global-user 12 RKQ1.210614.002 V13.0.8.0.SKQMIXM release-keys"
