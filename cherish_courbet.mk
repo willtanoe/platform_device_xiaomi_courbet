@@ -31,7 +31,6 @@ TARGET_USE_PIXEL_CHARGER := true
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.cherish.maintainer=willtanoe
 
-
 # Blur
 TARGET_USES_BLUR := true
 
@@ -46,8 +45,6 @@ WITH_GMS := true
 
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
-
-SELINUX_IGNORE_NEVERALLOWS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
